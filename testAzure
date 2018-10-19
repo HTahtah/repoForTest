@@ -1,0 +1,16 @@
+/*
+var mqtt = require("mqtt");
+var options = {
+    "rootCa":request.files.rootCa[0],
+    "username":"publishSubscribe.azure-devices.net/myFirstNodeDevice/api-version=2016-11-14",
+    "password":"SharedAccessSignature sr=publishSubscribe.azure-devices.net%3A8883%2Fdevices%2FmyFirstNodeDevice&sig=8nF1T5GVehLp6NGUF64JRp32Uq%2BOknvQRfCIfBVeslo%3D&se=1518622488",
+    "clientId":"myFirstNodeDevice"
+};
+var myMqtt = mqtt.getInstance("mqtts://publishSubscribe.azure-devices.net:8883", options);
+return myMqtt.publish("devices/myFirstNodeDevice/messages/events/readpipe", "{\"deviceId\":\"\",\"messageId\":13,\"temperature\":13,\"humidity\":13}");
+*/
+
+var mqtt = require("mqtt");
+var myMqtt = mqtt.getInstance("TestAzure4");
+
+return myMqtt.publish("devices/myFirstNodeDevice/messages/events/readpipe", "{humidity:13}");
