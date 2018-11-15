@@ -98,6 +98,9 @@
        
         vm.init = function() {
         }
+                vm.barFormatData1 = function(data){
+                  return data;
+                }
      });
         	
 })();
@@ -108,6 +111,27 @@
       <div ng-controller="RootCtrl as vm" ng-init="vm.init();"> 
 		<div gridster="vm.gridsterOptions">
           <ul>
+                <li class="myItem" gridster-item='{sizeX: 2, sizeY: 2, col: 0 , row: 0 }'>
+                    <div class="box">
+                        <div class="box-content">
+                          <div  style="height: 30px;" tooltip-placement="bottom" uib-tooltip="Bar Chart" class="box-label">Bar Chart</div>
+                          <div  style="height: calc(100% - 30px)" > <scriptr-chart
+										type='bar'
+										boxLabel='Bar Chart'
+										stacked='true'
+										xkey='y'
+										ykeys='["a", "b"]'
+										labels='["Serie A", "Serie B"]'
+										colors='["#7ed38c","#dd7ca7"]'
+										transport='wss'
+										msg-tag='chart'
+										data='[{"y":"2006","a":88,"b":20},{"y":"2007","a":30,"b":34},{"y":"2008","a":90,"b":42},{"y":"2009","a":89,"b":59},{"y":"2010","a":43,"b":61},{"y":"2011","a":85,"b":69},{"y":"2012","a":29,"b":65}]'
+										grid-text-family='Source Sans Pro'
+                                  		on-format-data='vm.barFormatData1'
+                           ></scriptr-chart> </div>
+                        </div>
+                    </div>
+                </li>
           </ul>
         </div>
       </div>
