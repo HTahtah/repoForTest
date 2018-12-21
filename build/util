@@ -1,4 +1,4 @@
- var scriptName='util';
+ var scriptName='util';sdgsdgs
 function handleResponse( response, errorMessages, stopOnError, action, scriptName, id ){
 		if (response.metadata.status == "failure") {
 			if(response.metadata.errorDetail && response.metadata.errorDetail.slice(-1)!="."){ 
