@@ -5,7 +5,7 @@
 	var listStores = util.callApi("ListStores", {}, null, errorMessages, stopOnError, scriptName, "");
 	for (i = 0; i < listStores.result.stores.length; i++) {
 	    if (listStores.result.stores[i].name != "DefaultStore") {
-	        var deleteStore = util.callApi("DeleteStore", {"apsdb.store": listStores.result.stores[i].name}, null, errorMessages, stopOnError, scriptName, listStores.result.stores[i].name);
+	        var deleteStore = util.callApi("DeleteStoreeeeeeee", {"apsdb.store": listStores.result.stores[i].name}, null, errorMessages, stopOnError, scriptName, listStores.result.stores[i].name);
 	    }
 	}
 	var listGroups = util.callApi("ListGroups", {}, null, errorMessages, stopOnError, scriptName, "");
